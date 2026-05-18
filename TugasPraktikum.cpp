@@ -35,3 +35,10 @@ class RekeningSyariah : public RekeningBank
     }
 
 };
+
+class RekeningKonvensional : public RekeningBank 
+{
+    public:
+    RekeningKonvensional(string nama, double saldoAwal) : RekeningBank(nama, saldoAwal) {}
+
+};
