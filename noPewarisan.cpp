@@ -9,3 +9,8 @@ class baseClass final
       cout << "Hallo saya Function dari base class";
    }
 };
+
+class baseClass1
+{
+    
+};
