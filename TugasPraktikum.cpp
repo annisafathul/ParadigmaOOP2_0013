@@ -23,3 +23,10 @@ class RekeningBank
 
     virtual ~RekeningBank() {}
 };
+
+class RekeningSyariah : public RekeningBank 
+{
+    public:
+    RekeningSyariah(string nama, double saldoAwal) : RekeningBank(nama, saldoAwal) {}
+
+};
