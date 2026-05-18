@@ -29,4 +29,9 @@ class RekeningSyariah : public RekeningBank
     public:
     RekeningSyariah(string nama, double saldoAwal) : RekeningBank(nama, saldoAwal) {}
 
+    void potongAdmin() override 
+    {
+        cout << "Rekening Syariah tidak dikenakan biaya admin." << endl;
+    }
+
 };
