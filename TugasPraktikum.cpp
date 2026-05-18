@@ -66,3 +66,41 @@ class RekeningPremium : public RekeningBank
         }
     }
 };
+
+int main() 
+{
+
+    RekeningBank* rekening1 = new RekeningSyariah("Annisa", 5000000);
+    RekeningBank* rekening2 = new RekeningKonvensional("Gibran", 7000000);
+    RekeningBank* rekening3 = new RekeningPremium("Alya", 9000000);
+    RekeningBank* rekening4 = new RekeningPremium("Rizky", 15000000);
+
+    cout << "=== Rekening Syariah ===" << endl;
+    rekening1->potongAdmin();
+    rekening1->tampilkanInfo();
+
+    cout << endl;
+
+    cout << "=== Rekening Konvensional ===" << endl;
+    rekening2->potongAdmin();
+    rekening2->tampilkanInfo();
+
+    cout << endl;
+
+    cout << "=== Rekening Premium 1 ===" << endl;
+    rekening3->potongAdmin();
+    rekening3->tampilkanInfo();
+
+    cout << endl;
+
+    cout << "=== Rekening Premium 2 ===" << endl;
+    rekening4->potongAdmin();
+    rekening4->tampilkanInfo();
+
+    delete rekening1;
+    delete rekening2;
+    delete rekening3;
+    delete rekening4;
+
+    return 0;
+}
