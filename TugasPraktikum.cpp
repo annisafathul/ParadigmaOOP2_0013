@@ -47,3 +47,22 @@ class RekeningKonvensional : public RekeningBank
         cout << "Biaya admin Rp 15.000 berhasil dipotong." << endl;
     }
 };
+
+class RekeningPremium : public RekeningBank 
+{
+    public:
+    RekeningPremium(string nama, double saldoAwal) : RekeningBank(nama, saldoAwal) {}
+
+    void potongAdmin() override 
+    {
+        if (saldo > 10000000) 
+        {
+            cout << "Saldo di atas Rp 10.000.000, bebas biaya admin." << endl;
+        } 
+        else 
+        {
+            saldo -= 50000;
+            cout << "Biaya admin Rp 50.000 berhasil dipotong." << endl;
+        }
+    }
+};
